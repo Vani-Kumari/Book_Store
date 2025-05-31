@@ -1,0 +1,14 @@
+/* Replace your tailwind.config.js with this CSS configuration */
+@import "tailwindcss";
+
+@theme static{
+  /* Colors from your original config */
+  --color-primary: #FFCE1A;
+  --color-secondary: #0D0842;
+  --color-blackBG: #F3F3F3;
+  --color-Favorite: #FF5841;
+  
+  /* Font families from your original config */
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Nunito Sans", sans-serif;
+}
