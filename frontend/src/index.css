@@ -1,7 +1,8 @@
 /* Replace your tailwind.config.js with this CSS configuration */
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap');
 
-@theme static{
+@theme {
   /* Colors from your original config */
   --color-primary: #FFCE1A;
   --color-secondary: #0D0842;
@@ -9,6 +10,7 @@
   --color-Favorite: #FF5841;
   
   /* Font families from your original config */
-  --font-primary: "Montserrat", sans-serif;
-  --font-secondary: "Nunito Sans", sans-serif;
+  --font-family-primary: "Montserrat", sans-serif;
+  --font-family-secondary: "Nunito Sans", sans-serif;
+  --font-family-outfit: "Outfit", sans-serif;
 }
