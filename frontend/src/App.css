@@ -37,7 +37,7 @@
 }
 
 .btn-primary {
-    background-color: var(--primary-color, #3b82f6); /* fallback to blue if --primary-color not defined */
+    background-color: var(--primary-color, #FFCE1A); /* fallback to blue if --primary-color not defined */
     padding: 0.5rem 3rem;
     border-radius: 0.375rem;
     font-size: 1rem;
@@ -48,7 +48,7 @@
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color, #1e40af); /* fallback to darker blue */
+    background-color: var(--secondary-color, #0D0842); /* fallback to darker blue */
     color: white;
 }
 
