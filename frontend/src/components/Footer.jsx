@@ -4,6 +4,9 @@ import footerLogo  from "../assets/footer-logo.png"
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 
 const Footer = () => {
+  if (location.pathname === '/login' || location.pathname === '/register') {
+        return null;
+  }
   return (
     <footer className="bg-gray-900 text-white py-10 px-4">
       {/* Top Section */}

@@ -14,12 +14,15 @@ const navigation = [
     { name: "Logout", href: "/logout" }
 ];
 
+
+
 const Navbar = () => {
+   
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
     const navigate = useNavigate();
     const dropdownRef = useRef(null);
-    const currentUser = true;
+    const currentUser = false;
 
     // Close dropdown when clicking outside
     useEffect(() => {
@@ -42,9 +45,11 @@ const Navbar = () => {
             setSearchQuery("");
         }
     };
-
+ if (location.pathname === '/login' || location.pathname === '/register') {
+        return null;
+    }
     return (
-        <header className='bg-white shadow-sm sticky top-0 z-50'>
+        <header className='bg-white sticky top-0 z-50'>
             <div className='max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
                 <nav className='flex justify-between items-center'>
                     {/* Left section with logo and search */}
@@ -61,12 +66,12 @@ const Navbar = () => {
                                 type="submit"
                                 className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-indigo-600'
                             >
-                                <IoSearchOutline className='size-5' />
+                                <IoSearchOutline className='size-5 ' />
                             </button>
-                            <input
+                            <input 
                                 type="text"
                                 placeholder='Search books, authors...'
-                                className='bg-gray-50 w-full py-2 pl-10 pr-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-transparent transition-all duration-200'
+                                className='bg-gray-200 w-full py-2 pl-10 pr-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-transparent transition-all duration-200'
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                             />
